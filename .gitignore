@@ -5,6 +5,7 @@ __pycache__/
 *.pyd
 *.db
 *.sqlite
+*.flask
 
 # Archivos de configuración del entorno virtual
 venv/

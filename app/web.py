@@ -12,16 +12,13 @@ with open(json_path, "r") as file:
 
 app = Flask(__name__)
 
-# Ruta para la página de inicio
 @app.route("/")
 def home():
     return render_template("index.html")
 
-# Ruta para crear una cotización (muestra formulario y procesa datos)
 @app.route("/crear_cotizacion", methods=["GET", "POST"])
 def crear_cotizacion():
     if request.method == "POST":
-        # Recibir datos del formulario
         nombre_cliente = request.form["nombre_cliente"]
         empresa_cliente = request.form["empresa_cliente"]
         cantidad_ventanas = int(request.form["cantidad_ventanas"])
@@ -32,15 +29,11 @@ def crear_cotizacion():
         tipo_vidrio = request.form["tipo_vidrio"]
         esmerilado = request.form.get("esmerilado") == "on"
 
-        # Crear objetos Cliente y Ventana
         cliente = Cliente(nombre_cliente, empresa_cliente)
         ventana = Ventana(estilo, ancho, alto, acabado, tipo_vidrio, esmerilado)
         cotizacion = Cotizacion(cliente, ventana, cantidad_ventanas)
-
-        # Calcular total
         total = cotizacion.calcular_total()
 
-        # Mostrar los resultados en una página
         return render_template("cotizacion.html", cliente=cliente, ventana=ventana, cotizacion=cotizacion, total=total)
 
     return render_template("crear_cotizacion.html")
@@ -74,6 +67,5 @@ def ver_tarifas(opcion):
             tarifas=tarifas_vidrio
         )
 
-# Iniciar la aplicación Flask
 if __name__ == "__main__":
     app.run(debug=True)
