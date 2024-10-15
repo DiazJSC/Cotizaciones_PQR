@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Menú de cotización de ventanas - PQR</h1>
+    <nav>
+        <a href="{{ url_for('crear_cotizacion') }}">Crear Cotización</a>
+        <li><a href="{{ url_for('ver_tarifas', opcion='1') }}">Ver Tarifas de Acabados</a></li>
+        <li><a href="{{ url_for('ver_tarifas', opcion='2') }}">Ver Tarifas de Vidrios</a></li>
+    </nav>
+</body>
+</html>

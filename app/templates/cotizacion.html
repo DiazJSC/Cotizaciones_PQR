@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de la Cotización</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Cotización Generada</h1>
+    <p><strong>Nombre del cotizante:</strong> {{ cliente.nombre_cliente }}</p>
+    <p><strong>Empresa:</strong> {{ cliente.nombre_empresa }}</p>
+    <p><strong>Estilo:</strong> {{ ventana.estilo }}</p>
+    <p><strong>Dimensiones:</strong> {{ ventana.ancho }} x {{ ventana.alto }} cm</p>
+    <p><strong>Acabado:</strong> {{ ventana.acabado }}</p>
+    <p><strong>Tipo de Vidrio:</strong> {{ ventana.tipo_vidrio }}</p>
+    <p><strong>Esmerilado:</strong> {{ 'Sí' if ventana.esmerilado else 'No' }}</p>
+    <p><strong>Cantidad de Ventanas:</strong> {{ cotizacion.cantidad_ventanas }}</p>
+    <h2>Total: ${{ total }}</h2>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+    "medidas": {
+      "aluminio": 3,
+      "vidrio": 1.5
+    },
+    "estilo_naves": {
+      "O": 1,
+      "XO": 2,
+      "OXO": 3,
+      "OXXO": 4
+    },
+    "costo_aluminio": {
+      "Pulido": 50700,
+      "Lacado Brillante": 54200,
+      "Lacado Mate": 53600,
+      "Anodizado": 57300,
+      "divi_unidad": 100
+    },
+    "costo_vidrio": {
+      "Transparente": 8.25,
+      "Bronce": 9.15,
+      "Azul": 12.75,
+      "Esmerilado": 5.20
+    },
+    "esquinas": 4310,
+    "chapa": 16200,
+    "descuento": 0.10
+  } 
