@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Cotización</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Crear Cotización</title>
 </head>
+
 <body>
     <h1>Crear Cotización</h1>
     <form action="{{ url_for('crear_cotizacion') }}" method="POST">
-        <label for="nombre_cliente">Nombre del Cliente:</label>
+        <label for="nombre_cliente">Nombre del Cotizante:</label>
         <input type="text" id="nombre_cliente" name="nombre_cliente" required><br>
 
-        <label for="empresa_cliente">Empresa:</label>
+        <label for="empresa_cliente">Empresa destinataria:</label>
         <input type="text" id="empresa_cliente" name="empresa_cliente" required><br>
 
         <label for="cantidad_ventanas">Cantidad de Ventanas:</label>
@@ -50,7 +51,18 @@
         <label for="esmerilado">Esmerilado:</label>
         <input type="checkbox" id="esmerilado" name="esmerilado"><br>
 
-        <button type="submit">Calcular Cotización</button>
+        <br><button type="submit" style="font-size: 14px;">Generar Cotización</button>
+        <br><br><a href="/">
+            <button type="button" style="font-size: 14px;">Volver</button>
+        </a>
     </form>
 </body>
+
+<hr>
+<footer>
+    <center><br>
+        Juan Sebastian Diaz Campos - Código: 2116642<br>
+        &copy; 2024 - GitHub: DiazJSC
+    </center>
+</footer>
 </html>

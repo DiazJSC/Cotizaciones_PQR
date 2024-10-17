@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultado de la Cotización</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Detalle Cotización</title>
 </head>
+
 <body>
     <h1>Cotización Generada</h1>
     <p><strong>Nombre del cotizante:</strong> {{ cliente.nombre_cliente }}</p>
@@ -17,5 +18,17 @@
     <p><strong>Esmerilado:</strong> {{ 'Sí' if ventana.esmerilado else 'No' }}</p>
     <p><strong>Cantidad de Ventanas:</strong> {{ cotizacion.cantidad_ventanas }}</p>
     <h2>Total: ${{ total }}</h2>
+
+    <br><a href="/">
+        <button type="button" style="font-size: 20px;">Volver</button>
+    </a>
 </body>
+
+<hr>
+<footer>
+    <center><br>
+        Juan Sebastian Diaz Campos - Código: 2116642<br>
+        &copy; 2024 - GitHub: DiazJSC
+    </center>
+</footer>
 </html>

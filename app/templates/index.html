@@ -3,15 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Inicio</title>
 </head>
+
 <body>
     <h1>Menú de cotización de ventanas - PQR</h1>
     <nav>
-        <a href="{{ url_for('crear_cotizacion') }}">Crear Cotización</a>
-        <li><a href="{{ url_for('ver_tarifas', opcion='1') }}">Ver Tarifas de Acabados</a></li>
-        <li><a href="{{ url_for('ver_tarifas', opcion='2') }}">Ver Tarifas de Vidrios</a></li>
+        <br><a href="{{ url_for('crear_cotizacion') }}">
+            <button style="font-size: 20px;">Crear Cotización</button>
+        </a><br>
+
+        <br><li><a href="{{ url_for('ver_tarifas', opcion='1') }}">
+            <button style="font-size: 20px;">Ver Tarifas de Acabados</button>
+        </a></li>
+
+        <br><li><a href="{{ url_for('ver_tarifas', opcion='2') }}">
+            <button style="font-size: 20px;">Ver Tarifas de Vidrios</button>
+        </a></li><br>
     </nav>
 </body>
+
+<hr>
+<footer>
+    <center><br>
+        Juan Sebastian Diaz Campos - Código: 2116642<br>
+        &copy; 2024 - GitHub: DiazJSC
+    </center>
+</footer>
 </html>
